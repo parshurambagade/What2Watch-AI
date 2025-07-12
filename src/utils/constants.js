@@ -63,3 +63,5 @@ export const MX_PLAYER_DATA_API3 =
 
 export const MX_PLAYER_DATA_API4 =
   "https://api.mxplayer.in/v1/web/home/tab/87c3ddc974dcf12294e9412bec44b097?next=65f9c44bac619a24d1d7787fd07b84d4&platform=com.mxplay.desktop&content-languages=hi,en";
+
+export const BACKEND_ENDPOINT = "https://what2watch-ai.vercel.app/api";

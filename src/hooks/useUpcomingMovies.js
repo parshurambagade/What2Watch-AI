@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addUpcomingMovies } from "../redux/moviesSlice";
+import { BACKEND_ENDPOINT } from "../utils/constants";
 
 const useUpcomingMovies = () => {
   const dispatch = useDispatch();
@@ -8,7 +9,7 @@ const useUpcomingMovies = () => {
 
   const fetchMovies = useCallback(async () => {
     try {
-      const data = await fetch("/api/upcoming-movies");
+      const data = await fetch(`${BACKEND_ENDPOINT}/upcoming-movies`);
       const json = await data.json();
       dispatch(addUpcomingMovies(json.results));
     } catch (e) {

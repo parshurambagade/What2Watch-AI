@@ -11,8 +11,8 @@ const MovieText = ({ title, overview }) => {
   return (
     <div className="absolute top-0 left-0 w-full min-h-[calc(100vh-64px)] px-4  md:px-8 lg:px-20 pt-[25%] md:pt-[10%] flex  flex-col gap-4 bg-gradient-to-l md:bg-gradient-to-r from-black text-white items-end md:items-start">
       {/* text container  */}
-      <div className="flex flex-col gap-3 max-w-max w-1/3 md:w-1/2 xl:w-1/3">
-        <h1 className="text-3xl lg:text-5xl xl:text-6xl font-extrabold text-right md:text-left mx-2  mr-4 md:mx-0 min-w-max">
+      <div className=" flex flex-wrap flex-col gap-3 max-w-max w-1/2 xl:w-1/3">
+        <h1 className="text-3xl lg:text-5xl xl:text-6xl font-extrabold text-right md:text-left mx-2  mr-4 md:mx-0  text-ellipsis">
           {title}
         </h1>
         <p className="hidden md:flex md:text-base xl:text-lg text-ellipsis">

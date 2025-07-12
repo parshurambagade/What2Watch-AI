@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTrailer } from "../redux/moviesSlice";
+import { BACKEND_ENDPOINT } from "../utils/constants";
 
 const useTrailer = (movieId) => {
   const dispatch = useDispatch();
@@ -8,7 +9,7 @@ const useTrailer = (movieId) => {
 
   const fetchMovieVideos = useCallback(async () => {
     try {
-      const data = await fetch(`/api/movie-videos?movieId=${movieId}`);
+      const data = await fetch(`${BACKEND_ENDPOINT}/movie-videos?movieId=${movieId}`);
 
       const json = await data.json();
 
